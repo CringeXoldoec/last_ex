@@ -17,7 +17,7 @@ class RequestingController extends Controller
             return redirect()->route('admin');
         }
 
-        $options = Requesting::where('user_id', Auth::id())->get();
+        $options = Requesting::where('user_id', Auth::id())->with('user')->get();
         return view('offer.show', compact('options'));
 
     }

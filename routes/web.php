@@ -36,9 +36,9 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::post('/request', [RequestingController::class, 'store'])->name('request.store')->middleware('auth');
 
-Route::get('/show', [RequestingController::class, 'index'])->name('show');
+Route::get('/show', [RequestingController::class, 'index'])->name('show')->middleware('auth');
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('admin');
 
-Route::patch('options/{option}/update', [AdminController::class, 'update'])->name('options.update')->middleware('auth');
+Route::patch('options/{option}/update', [AdminController::class, 'update'])->name('options.update');
 

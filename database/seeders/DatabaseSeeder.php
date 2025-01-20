@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
         // ]);
         User::create([
             'full_name' => 'Admin',
-            'email' => 'admin@prine.su',
+            'email' => 'kir@admin.ru',
             'phone' => '89393494357',
-            'password' => Hash::make('tolkanka'),
+            'password' => Hash::make('rootroot'),
             'role' => 'admin'
         ]);
     }

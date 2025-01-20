@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\AdminsMiddleware;
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -40,6 +42,8 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+
 
 /*
 |--------------------------------------------------------------------------
